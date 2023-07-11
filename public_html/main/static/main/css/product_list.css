@@ -1,0 +1,673 @@
+
+
+
+@media (min-width:1025px) {
+
+    /* div с карточками товара */
+    .list_product {
+        align-items: left;
+        text-align: left;
+        border: 0.5px solid grey;
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+
+    }
+
+    /* div карточки товара */
+    .prod_cart {
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        float: top;
+        border: 0.5px groove rgb(230,230,230);
+        border-radius: 10px;
+        padding: 10px 10px;
+        width: 28%;
+        height: auto;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        min-height: 500px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+
+    }
+
+    /* изображение карточки товара */
+    .prod_img {
+        width: 90%;
+        height: auto;
+        border-radius: 20px;
+        margin-top: 10px;
+        object-fit: contain;
+
+    }
+
+
+
+    /* имя товара */
+    .prod_name {
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 16px;
+        user-select: none;
+
+
+    }
+    .prod_price {
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+
+    .prod_size {
+        font-size: 14px;
+        margin-top: 20px;
+        color: rgb(150, 150, 150);
+        line-height: 2;
+    }
+
+    #main {
+        display: flex;
+
+    }
+
+
+    #center_block {
+        width: 67%;
+        display: block;
+        margin-left: 50px;
+        position: relative;
+
+
+    }
+
+    #left_block {
+        margin-left: 40px;
+        width: 20%;
+    }
+
+
+    #sort_category_inf {
+        margin-left: 70px;
+        margin-bottom: 30px;
+
+
+    }
+
+    #sort_brand_inf {
+        font-weight: 800;
+        margin-left: 70px;
+        margin-bottom: 30px;
+    }
+
+
+    .sort_filter_div {
+        border: 1px solid grey;
+        border-radius: 20px;
+        padding: 20px 5px;
+        margin-top: 20px;
+        display: block;
+        text-align: left;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    .category {
+        margin-left: 40px;
+        font-size: 25px;
+        font-weight: 700;
+        color: rgb(130,130,130);
+        border: none;
+        transition: 0.5s;
+
+    }
+    .category:hover { font-size: 35px; }
+    .category:hover { color: rgb(80,80,80); }
+
+
+    .off_filter {
+        margin-left: 40px;
+        font-size: 25px;
+        font-weight: 700;
+        color: rgb(130,130,130);
+        border: none;
+        transition: 0.5s;
+        margin-bottom: 20px;
+    }
+
+
+    .off_filter:hover { font-size: 35px; }
+    .off_filter:hover { color: rgb(80,80,80); }
+
+
+    .brand {
+        margin-left: 40px;
+        font-size: 25px;
+        font-weight: 700;
+        color: rgb(130,130,130);
+        border: none;
+        transition: 0.5s;
+
+    }
+    .brand:hover { font-size: 35px; }
+    .brand:hover { color: rgb(80,80,80); }
+
+    #lv {
+        margin-left: 40px;
+        font-size: 25px;
+        font-weight: 700;
+        color: rgb(130,130,130);
+        border: none;
+        transition: 0.5s;
+    }
+
+    #lv:hover { font-size: 30px; }
+    #lv:hover { color: rgb(80,80,80); }
+    #lv:hover { margin-left: 10px; }
+
+
+
+
+
+    .brand_logo {
+        width: 65px;
+        height: 45px;
+        object-fit: contain;
+
+    }
+
+
+    #gucci {
+        width: 55px;
+        height: 35px;
+    }
+
+
+    #search_div {
+        border-radius: 20px 20px 0px 0px;
+        width: 100%;
+        height: 90px;
+        padding: 10px 10px 20px 70px;
+        display: flex;
+        border: 1px solid grey;
+        border-bottom: none;
+        position: relative;
+        top: 20px;
+    }
+
+
+    /* Текст инпут для поиска по странице */
+    .catalog_search {
+        width: 60%;
+        height: 43px;
+        border-radius: 40px;
+        border: 1px groove #0d6efd;
+        padding: 11px 15px;
+        margin-left: 30px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+
+
+    }
+
+    .searchbutton {
+        text-decoration: none;
+        border: 0px;
+        text-size: 20px;
+        border-radius: 0px 10px 10px 0px;
+        border-left: 0px;
+        width: 48px;
+        height: 48px;
+    }
+
+
+    #sort_btn {
+        margin-left: 20px;
+        margin-right: 20px;
+        height: 43px;
+        border-radius: 40px;
+        border: 1px groove #0d6efd;
+        padding: 1px 30px 0px 10px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    #sort_btn:checked { transform: rotateZ(180deg); }
+
+
+    #sort_div {
+        text-align: left;
+        margin-left: 20px;
+        opacity: 0;
+        position: absolute;
+        background-color: white;
+        border-radius: 10px;
+        display: block;
+        top: 250px;
+        left: -300%;
+        padding: 10px 10px 10px 10px;
+        border: 0.5px solid grey;
+        z-index: 10;
+
+    }
+
+    .sort_indiv_btn {
+        background: white;
+        border: 0px;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: 0.8s;
+
+    }
+
+    .sort_indiv_btn:hover { background: rgb(220,220,220); }
+
+
+
+    #sort_btn_png {
+        position: relative;
+        left: -55px;
+        width: 25px;
+        height: 25px;
+
+    }
+
+
+    #div_sort_btn {
+        display: inline;
+    }
+
+
+    .hide {
+        display: none;
+    }
+
+
+
+    #menu_img {
+        display: none;
+    }
+
+
+    #close {
+        display: none;
+    }
+    #close_img {
+        display: none;
+    }
+
+    #filter_img {
+        display: none;
+    }
+
+    #filter_btn {
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 650px) {
+
+
+    #main {
+        display: flex;
+    }
+
+
+    #center_block {
+        width: 100%;
+        display: block;
+        position: relative;
+        top: -30px;
+    }
+
+
+
+
+    /* div с карточками товара */
+    .list_product {
+        align-items: left;
+        text-align: left;
+        border: 0.5px solid grey;
+        width: 100%;
+        height: auto;
+        padding: 10px 10px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+
+
+    }
+
+    /* div карточки товара */
+    .prod_cart {
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        float: top;
+        border: 1px groove rgb(220,220,220);
+        border-radius: 10px;
+        padding: 10px 10px;
+        width: 46%;
+        height: auto;
+        margin-bottom: 30px;
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        min-height: 370px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    /* изображение карточки товара */
+    .prod_img {
+        width: 90%;
+        height: auto;
+        border-radius: 30px;
+        margin-top: 10px;
+        object-fit: contain;
+
+
+    }
+
+
+
+    /* имя товара */
+    .prod_name {
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 20px;
+        user-select: none;
+
+
+    }
+    .prod_price {
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+
+    .prod_size {
+        font-size: 15px;
+        margin-top: 20px;
+        color: rgb(150, 150, 150);
+    }
+
+
+
+
+    #left_block {
+        background: rgb(241, 241, 241);
+        display: block;
+        height: 100%;
+        left: -300%;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        padding: 10px 10px;
+    }
+
+    #scroll_elem {
+        height: 100%;
+        grid-area: menu;
+        overflow-y: scroll;
+    }
+
+    #close {
+        border: 0px;
+        margin-left: 87%;
+        margin-top: 3%;
+        column: left;
+    }
+
+    #close_img {
+        width: 30px;
+        height: 30px;
+
+    }
+
+    #sort_category_inf {
+        margin-left: 70px;
+        margin-bottom: 30px;
+
+
+    }
+
+    #sort_brand_inf {
+        font-weight: 800;
+        margin-left: 70px;
+        margin-bottom: 30px;
+    }
+
+
+    .sort_filter_div {
+        border: 1px solid grey;
+        border-radius: 20px;
+        padding: 20px 5px;
+        margin-top: 20px;
+        display: block;
+        text-align: left;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    .category {
+        margin-left: 40px;
+        font-size: 25px;
+        font-weight: 700;
+        color: rgb(130,130,130);
+        border: none;
+        transition: 0.5s;
+
+    }
+    .category:hover { font-size: 35px; }
+    .category:hover { color: rgb(80,80,80); }
+
+
+    .off_filter {
+        margin-left: 40px;
+        font-size: 25px;
+        font-weight: 700;
+        color: rgb(130,130,130);
+        border: none;
+        transition: 0.5s;
+        margin-bottom: 20px;
+    }
+
+
+    .off_filter:hover { font-size: 35px; }
+    .off_filter:hover { color: rgb(80,80,80); }
+
+
+    .brand {
+        margin-left: 40px;
+        font-size: 25px;
+        font-weight: 700;
+        color: rgb(130,130,130);
+        border: none;
+        transition: 0.5s;
+
+    }
+    .brand:hover { font-size: 35px; }
+    .brand:hover { color: rgb(80,80,80); }
+
+    #lv {
+        margin-left: 40px;
+        font-size: 25px;
+        font-weight: 700;
+        color: rgb(130,130,130);
+        border: none;
+        transition: 0.5s;
+    }
+
+    #lv:hover { font-size: 30px; }
+    #lv:hover { color: rgb(80,80,80); }
+    #lv:hover { margin-left: 10px; }
+
+
+
+
+
+    .brand_logo {
+        width: 65px;
+        height: 45px;
+        object-fit: contain;
+
+    }
+
+
+    #gucci {
+        width: 55px;
+        height: 35px;
+    }
+
+
+    #search_div {
+        border-radius: 20px 20px 0px 0px;
+        width: 100%;
+        height: 90px;
+        padding: 10px 10px 20px 10px;
+        display: flex;
+        border: 1px solid grey;
+        border-bottom: none;
+        position: relative;
+        top: 20px;
+        justify-content: left;
+    }
+
+
+    /* Текст инпут для поиска по странице */
+    .catalog_search {
+        width: 50%;
+        height: 43px;
+        border-radius: 40px;
+        border: 1px groove #0d6efd;
+        padding: 11px 15px;
+        margin-left: 10px;
+        margin-top: 4px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+        position: right;
+
+
+
+    }
+
+    .searchbutton {
+        text-decoration: none;
+        border: 0px;
+        text-size: 20px;
+        border-radius: 0px 10px 10px 0px;
+        border-left: 0px;
+        width: 48px;
+        height: 48px;
+    }
+
+
+    #sort_btn {
+        margin-left: 5px;
+        height: 43px;
+        width: 200px;
+        border-radius: 40px;
+        font-size: 11px;
+        border: 1px groove #0d6efd;
+        padding: 1px 20px 0px 0px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    #sort_btn:checked { transform: rotateZ(180deg); }
+
+
+    #btn_and_div {
+
+    }
+
+    #div_sort_btn {
+        width: 50%;
+        padding: 4px 0px;
+        display: flex;
+        text-align: left;
+    }
+
+
+    #sort_div {
+        text-align: left;
+        opacity: 0;
+        background-color: white;
+        border-radius: 10px;
+        position: absolute;
+        top: 220px;
+        left: -300%;
+        padding: 10px 10px 10px 10px;
+        border: 0.5px solid grey;
+        z-index: 10;
+    }
+
+    .sort_indiv_btn {
+        background: white;
+        border: 0px;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: 0.8s;
+
+    }
+
+    .sort_indiv_btn:hover { background: rgb(220,220,220); }
+
+
+
+    #sort_btn_png {
+        position: relative;
+        left: -35px;
+        top: 10px;
+        width: 25px;
+        height: 25px;
+
+    }
+
+    #filter_img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #filter_btn {
+        transition: 0.4s;
+        border: 0.5px groove #0d6efd;
+        border-radius: 10px;
+        width: 55px;
+        height: 55px;
+        margin-right: 10px;
+
+    }
+
+
+    .hide {
+        display: none;
+    }
+
+}

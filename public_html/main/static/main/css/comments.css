@@ -1,0 +1,403 @@
+@media (min-width:1025px) {
+
+    #body {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .all_comments {
+        margin: auto;
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        height: fit-content;
+        border: 1px groove rgb(220,220,220);
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+        justify-content: center;
+        padding: 20px 20px;
+    }
+
+    #add_comment {
+        margin-top: 20px;
+        width: 30%;
+        height: 50px;
+        font-size: 23px;
+        background: #66C332;
+        color: white;
+        transition: 0.4s;
+        border: 1px groove #66C332;
+        border-radius: 40px;
+        font-weight: 700;
+    }
+
+    #add_comment:hover { background-color: white } /* при наведении курсора мышки */
+    #add_comment:hover { color: #66C332; } /* при наведении курсора мышки */
+
+    #img_add_comment {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+
+
+    .comment_div {
+        padding: 20px;
+        display: flex;
+        width: 40%;
+        background: white;
+        border: 1px groove rgb(220,220,220);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+
+
+    .user_img {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .user_name_and_text {
+        text-align: left;
+        background: white;
+        padding: 10px 20px;
+    }
+
+    .name_user {
+        color: blue;
+    }
+
+
+    #form_comment {
+        width: 40%;
+
+        display: block;
+        margin: auto;
+        background: white;
+        border-radius: 20px;
+        padding: 20px;
+
+    }
+
+    #form_div {
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        padding: 20px 20px;
+        border: 1px groove rgb(220,220,220);
+        display: none;
+        position: fixed;
+        z-index: 10;
+        justify-content: center;
+        background-color: rgba(0,0,0,0.5); /*затемнитефон*/
+    }
+
+    .input_name {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        padding: 10px 10px;
+        border: 1px groove rgb(200,200,200);
+        border-radius: 40px;
+        width: 80%;
+    }
+
+    .input_text {
+        padding: 10px 10px;
+        border: 1px groove rgb(200,200,200);
+        border-radius: 10px;
+        margin-bottom: 20px;
+        width: 80%;
+        height: 150px;
+        text-align: left;
+        text-align: top;
+    }
+
+    .post_comment_btn {
+        margin-top: 20px;
+        width: 50%;
+        height: 50px;
+        font-size: 23px;
+        background: #0d6efd;
+        color: white;
+        transition: 0.4s;
+        border: 1px groove #0d6efd;
+        border-radius: 40px;
+    }
+
+    .post_comment_btn:hover { background-color: white } /* при наведении курсора мышки */
+    .post_comment_btn:hover { color: #0d6efd; } /* при наведении курсора мышки */
+
+    #id_score {
+        display: none;
+    }
+
+    .name_and_score {
+        display: flex;
+    }
+
+
+    .img_score {
+        width: 70px;
+        height: 70px;
+    }
+
+    .img_score_comment {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 2px;
+        margin-left: 10px;
+    }
+
+     #score_pos_btn {
+        border: none;
+        background: white;
+        opacity: 1;
+    }
+
+    #score_neg_btn {
+        border: none;
+        background: white;
+        opacity: 1;
+    }
+
+
+
+
+    #error_btn {
+        margin-top: 20px;
+        width: 50%;
+        height: 50px;
+        font-size: 23px;
+        background: rgb(205,92,92);
+        color: white;
+        transition: 0.4s;
+        border: 1px groove rgb(205,92,92);
+        border-radius: 40px;
+        margin-bottom: 10px;
+    }
+
+    #error_btn:hover { background-color: white } /* при наведении курсора мышки */
+    #error_btn:hover { color: rgb(205,92,92); } /* при наведении курсора мышки */
+
+
+    #close {
+        background: white;
+        border: 0px;
+        position: relative;
+        left: 49%;
+        top: -13px;
+    }
+    #close_img { width: 20px; height: 20px;}
+
+}
+
+
+
+@media screen and (max-width: 650px) {
+    #body {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .all_comments {
+        margin: auto;
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        height: fit-content;
+        border: 1px groove rgb(220,220,220);
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+        justify-content: center;
+        padding: 10px;
+    }
+
+    #add_comment {
+        margin-top: 20px;
+        width: 97%;
+        height: 50px;
+        font-size: 23px;
+        background: #66C332;
+        color: white;
+        transition: 0.4s;
+        border: 1px groove #66C332;
+        border-radius: 40px;
+        font-weight: 700;
+    }
+
+    #add_comment:hover { background-color: white } /* при наведении курсора мышки */
+    #add_comment:hover { color: #66C332; } /* при наведении курсора мышки */
+
+    #img_add_comment {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+
+
+    .comment_div {
+        padding: 20px;
+        display: flex;
+        width: 90%;
+        background: white;
+        border: 1px groove rgb(220,220,220);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+        margin-top: 30px;
+        margin-left: 5px;
+        margin-right: 20px;
+
+    }
+
+
+    .user_img {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .user_name_and_text {
+        text-align: left;
+        background: white;
+        padding: 10px 20px;
+    }
+
+    .name_user {
+        color: blue;
+    }
+
+
+    #form_comment {
+        width: 98%;
+        display: block;
+        margin: auto;
+        background: white;
+        border-radius: 20px;
+        padding: 20px;
+
+    }
+
+    #form_div {
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        padding: 20px 20px;
+        border: 1px groove rgb(220,220,220);
+        display: none;
+        position: fixed;
+        z-index: 10;
+        justify-content: center;
+        background-color: rgba(0,0,0,0.5); /*затемнитефон*/
+    }
+
+    .input_name {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        padding: 10px 10px;
+        border: 1px groove rgb(200,200,200);
+        border-radius: 40px;
+        width: 80%;
+    }
+
+    .input_text {
+        padding: 10px 10px;
+        border: 1px groove rgb(200,200,200);
+        border-radius: 10px;
+        margin-bottom: 20px;
+        width: 80%;
+        height: 150px;
+        text-align: left;
+        text-align: top;
+    }
+
+    .post_comment_btn {
+        margin-top: 20px;
+        width: 70%;
+        height: 50px;
+        font-size: 23px;
+        background: #0d6efd;
+        color: white;
+        transition: 0.4s;
+        border: 1px groove #0d6efd;
+        border-radius: 40px;
+    }
+
+    .post_comment_btn:hover { background-color: white } /* при наведении курсора мышки */
+    .post_comment_btn:hover { color: #0d6efd; } /* при наведении курсора мышки */
+
+    #id_score {
+        display: none;
+    }
+
+    .name_and_score {
+        display: flex;
+    }
+
+
+    .img_score {
+        width: 70px;
+        height: 70px;
+    }
+
+    .img_score_comment {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 2px;
+        margin-left: 10px;
+    }
+
+    #score_pos_btn {
+        border: none;
+        background: white;
+        opacity: 1;
+    }
+
+    #score_neg_btn {
+        border: none;
+        background: white;
+        opacity: 1;
+    }
+
+
+
+    #error_btn {
+        margin-top: 20px;
+        width: 60%;
+        height: 50px;
+        font-size: 23px;
+        background: rgb(205,92,92);
+        color: white;
+        transition: 0.4s;
+        border: 1px groove rgb(205,92,92);
+        border-radius: 40px;
+        margin-bottom: 10px;
+    }
+
+    #error_btn:hover { background-color: white } /* при наведении курсора мышки */
+    #error_btn:hover { color: rgb(205,92,92); } /* при наведении курсора мышки */
+
+
+    #close {
+        background: white;
+        border: 0px;
+        position: relative;
+        left: 49%;
+        top: -13px;
+    }
+    #close_img { width: 20px; height: 20px;}
+
+
+
+
+}

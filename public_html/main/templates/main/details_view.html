@@ -1,0 +1,157 @@
+{% extends 'main/example.html' %}
+{% load static %}
+{% block content %}
+    <title>{{ product.name }}</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="{% static '/main/js/scripts.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'main/css/detail.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/order.css' %}">
+
+
+	<body id="body">
+
+		<div id="detdiv" class="detail_div">
+
+			<div id="hidden_order">
+				<div class="order">
+					<button id="close"><img id="close_img" src="{% static '/main/img/close.svg' %}" alt=""></button>
+					<h3>Оформление заказа</h3>
+					<hr>
+					<h1 id="text_info">Оформить заказ вы можете в личных сообщениях нашей группы ВКонтакте</h1>
+					<button id="vk_btn"><img id="vklogo" src="{% static '/main/img/vk_logo.svg' %}" alt="1">BLYNSKY SHOP</button>
+					<br>
+					<button id="tg_btn"><img id="tglogo" src="{% static '/main/img/tglogo.png' %}" alt="1">@BLYNSKYSHOP</button>
+
+				</div>
+			</div>
+
+
+
+			{% if product.miniphoto1 == "" %}
+
+				<div class="all">
+				<input checked type="radio" name="respond" id="desktop">
+					<article id="slider">
+							<input checked type="radio" name="slider" id="switch1">
+							<input type="radio" name="slider" id="switch2">
+							<input type="radio" name="slider" id="switch3">
+							<input type="radio" name="slider" id="switch4">
+							<input type="radio" name="slider" id="switch5">
+						<div id="slides">
+							<div id="overflow">
+								<div class="image">
+									<article><img class="prod_img" src="{{ product.photo }}"></article>
+								</div>
+							</div>
+						</div>
+
+
+					</article>
+				</div>
+				<hr class="personal_hr">
+			{% elif product.miniphoto2 == "" %}
+
+				<div class="all">
+				<input checked type="radio" name="respond" id="desktop">
+					<article id="slider">
+							<input checked type="radio" name="slider" id="switch1">
+							<input type="radio" name="slider" id="switch2">
+							<input type="radio" name="slider" id="switch3">
+							<input type="radio" name="slider" id="switch4">
+							<input type="radio" name="slider" id="switch5">
+						<div id="slides">
+							<div id="overflow">
+								<div class="image">
+									<article><img class="prod_img" src="{{ product.photo }}"></article>
+									<article><img class="prod_img" src="{{ product.miniphoto1 }}"></article>
+								</div>
+							</div>
+						</div>
+
+						<div id="controls">
+							<label for="switch1"></label>
+							<label for="switch2"></label>
+						</div>
+
+						<div id="active">
+							<label for="switch1"></label>
+							<label for="switch2"></label>
+
+						</div>
+					</article>
+				</div>
+				<hr>
+
+			{% elif product.miniphoto2 %}
+
+
+				<div class="all">
+				<input checked type="radio" name="respond" id="desktop">
+					<article id="slider">
+							<input checked type="radio" name="slider" id="switch1">
+							<input type="radio" name="slider" id="switch2">
+							<input type="radio" name="slider" id="switch3">
+							<input type="radio" name="slider" id="switch4">
+							<input type="radio" name="slider" id="switch5">
+						<div id="slides">
+							<div id="overflow">
+								<div class="image">
+									<article><img class="prod_img" src="{{ product.photo }}"></article>
+									<article><img class="prod_img" src="{{ product.miniphoto1 }}"></article>
+									<article><img class="prod_img" src="{{ product.miniphoto2 }}"></article>
+
+								</div>
+							</div>
+						</div>
+						<div id="controls">
+							<label for="switch1"></label>
+							<label for="switch2"></label>
+							<label for="switch3"></label>
+
+						</div>
+						<div id="active">
+							<label for="switch1"></label>
+							<label for="switch2"></label>
+							<label for="switch3"></label>
+
+						</div>
+					</article>
+				</div>
+				<hr>
+			{% endif %}
+
+
+
+
+
+			<h2 class="detail_name" >{{ product.name }}</h2>
+			<h5 class="detail_deskription">{{ product.deskription }}</h5>
+
+			<h5 class="detail_size">Доступные размеры: <br>{{ product.sizes }}</h5>
+			<h5 class="detail_price">{{ product.price }} ₽</h5>
+
+			<form id="form1" method="post">
+				{% csrf_token %}
+				<button id='submit_btn' class="btn btn-success detail_dropbutton"
+						data-product-id ='{{ product.id }}'
+						data-product-name="{{ product.name }}"
+						data-product-img="{{ product.photo }}"
+						data-product-price="{{ product.price }}"
+
+
+				>
+					Добавить в корзину</button>
+
+				<br>
+				<a id="order_btn" class="btn btn-success detail_order">Оформить заказ</a>
+			</form>
+
+
+
+		</div>
+	</body>
+
+
+
+
+{% endblock %}

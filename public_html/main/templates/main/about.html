@@ -1,0 +1,54 @@
+{% extends 'main/example.html' %}
+{% load static %}
+{% block content %}
+    <title>Информация о нас</title>
+    <script src="{% static '/main/js/about.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'main/css/about.css' %}">
+
+    <div id="all_content">
+
+
+        <div class="block" id="first_block">
+            <img class="img_block" src="{% static 'main/img/about/block1.png' %}">
+            <span class="text">У нас вы можете купить оригинальные вещи <br> по самым оптимальным ценам на рынке.</span>
+        </div>
+
+        <hr class="hor_line">
+
+        <div class="block" id="second_block">
+            <img class="img_block" src="{% static 'main/img/about/block2.png' %}">
+            <span class="text" >Мы доставляем вещи по всей России!</span>
+        </div>
+
+        <hr class="hor_line">
+
+        <div class="block" id="third_block">
+            <img id="img_block3" src="{% static 'main/img/about/block3.png' %}">
+            <span>Так же мы предоставляем услуги логистической компании и доставляем товары с Европы и Китая включительно!</span>
+        </div>
+
+        <hr class="hor_line">
+
+        <div class="block" id="four_block">
+            <img id="img_block4" src="{% static 'main/img/about/block4.png' %}">
+            <span>Друзья, <br>
+            если вы не нашли вещь, которую хотели бы приобрести то мы готовы выслушать ваши предложения и постараться найти то,
+            что вам нужно.
+
+            Мы всегда открыты для обратной связи и готовы сделать все возможное,
+            чтобы удовлетворить потребности наших клиентов.
+           </span>
+        </div>
+
+        <hr class="hor_line">
+
+        <div class="block" id="five_block">
+            <img id="img_block5" src="{% static 'main/img/about/block5.png' %}">
+            <span>Связаться с нами вы можете в нашей группе Вконтакте или Телеграм канале</span>
+            <button id="vk_btn"><img id="vklogo" src="{% static '/main/img/vk_logo.png' %}" alt="1">BLYNSKY SHOP</button>
+
+            <button id="tg_btn"><img id="tglogo" src="{% static '/main/img/tglogo.png' %}" alt="1">@BLYNSKYSHOP</button>
+        </div>
+
+    </div>
+{% endblock %}

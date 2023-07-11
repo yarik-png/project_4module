@@ -1,0 +1,315 @@
+@media (min-width:1025px) {
+    #all_content {
+        display: block;
+        width: 70%;
+        height: 95%;
+        position: relative;
+        top: 20px;
+        border: 0.5px groove rgb(200,200,200);
+        border-radius: 20px;
+        margin-left: 15%;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .block {
+        width: 100%;
+        height: 600px;
+        height: fit-content;
+        padding: 70px 100px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .img_block {
+        width: 110px;
+        height: 100px;
+        margin-bottom: 40px;
+    }
+
+    #img_block3 {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 40px;
+    }
+
+    #img_block4 {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 40px;
+    }
+    #img_block5 {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 40px;
+
+    }
+
+    .hor_line {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .text {
+        color: black;
+        font-size: 35px;
+    }
+
+
+
+    #first_block {
+        font-size: 15px;
+    }
+
+    #four_block {
+        font-size: 25px;
+    }
+
+    #third_block {
+        font-size: 35px;
+    }
+
+    #five_block {
+        font-size: 35px;
+    }
+
+
+
+
+
+
+
+    #vk_btn {
+        margin-top: 40px;
+        width: 70%;
+        font-size: 25px;
+        font-weight: 700;
+        padding: 5px;
+        border-radius: 50px;
+        text-decoration: none;
+        background: #71AAEB;
+        height: 60px;
+        border: 2px groove #71AAEB;
+        color: white;
+        transition: 0.5s;
+
+    }
+
+
+    #vk_btn:hover { background-color: white; } /* при наведении курсора мышки */
+    #vk_btn:hover { color: #71AAEB; } /* при наведении курсора мышки */
+
+
+
+    #vklogo {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        position: relative;
+        top: -3px;
+    }
+
+    #tglogo {
+        margin-bottom: 5px;
+        margin-right: 5px;
+        width: 40px;
+
+    }
+
+    #tg_btn {
+        width: 70%;
+        font-size: 25px;
+        font-weight: 700;
+        padding: 10px 10px;
+        border-radius: 50px;
+        text-decoration: none;
+        background: white;
+        height: 60px;
+        border: 0px;
+        margin-top: 30px;
+        border: 2px groove #71AAEB;
+        color: #4991e4;
+        transition: 0.5s;
+    }
+
+    #tg_btn:hover { background-color: #71AAEB; } /* при наведении курсора мышки */
+    #tg_btn:hover { color: white; } /* при наведении курсора мышки */
+    #tg_btn:hover { border: 2px solid white; } /* при наведении курсора мышки */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 650px) {
+    #all_content {
+        display: block;
+        width: 90%;
+        height: 95%;
+        position: relative;
+        top: 20px;
+        border: 0.5px groove rgb(200,200,200);
+        border-radius: 20px;
+        margin-left: 5%;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .block {
+        width: 100%;
+        height: 600px;
+        height: fit-content;
+        padding: 70px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+
+
+    }
+
+    .img_block {
+        width: 110px;
+        height: 100px;
+        margin-bottom: 40px;
+    }
+
+    #img_block3 {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 40px;
+    }
+
+    #img_block4 {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 40px;
+    }
+    #img_block5 {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 40px;
+
+    }
+
+    .hor_line {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .text {
+        color: black;
+        font-size: 25px;
+    }
+
+
+
+    #first_block {
+        font-size: 15px;
+    }
+
+    #four_block {
+        font-size: 25px;
+    }
+
+    #third_block {
+        font-size: 25px;
+    }
+
+    #five_block {
+        font-size: 35px;
+    }
+
+
+
+
+
+
+
+    #vk_btn {
+        margin-top: 40px;
+        width: 90%;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 5px;
+        border-radius: 50px;
+        text-decoration: none;
+        background: #71AAEB;
+        height: 60px;
+        border: 2px groove #71AAEB;
+        color: white;
+        transition: 0.5s;
+
+    }
+
+
+    #vk_btn:hover { background-color: white; } /* при наведении курсора мышки */
+    #vk_btn:hover { color: #71AAEB; } /* при наведении курсора мышки */
+
+
+
+    #vklogo {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        position: relative;
+        top: -3px;
+    }
+
+    #tglogo {
+        margin-bottom: 5px;
+        margin-right: 5px;
+        width: 40px;
+
+    }
+
+    #tg_btn {
+        width: 90%;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 10px 10px;
+        border-radius: 50px;
+        text-decoration: none;
+        background: white;
+        height: 60px;
+        border: 0px;
+        margin-top: 30px;
+        border: 2px groove #71AAEB;
+        color: #4991e4;
+        transition: 0.5s;
+    }
+
+    #tg_btn:hover { background-color: #71AAEB; } /* при наведении курсора мышки */
+    #tg_btn:hover { color: white; } /* при наведении курсора мышки */
+    #tg_btn:hover { border: 2px solid white; } /* при наведении курсора мышки */
+
+}

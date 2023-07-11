@@ -1,0 +1,71 @@
+{% extends 'main/example.html' %}
+{% load static %}
+{% block content %}
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="{% static '/main/js/scripts.js' %}"></script>
+    <script src="{% static '/main/js/basket.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'main/css/basket.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/order.css' %}">
+    <title>Корзина</title>
+
+
+    <div id="hidden_order">
+        <div class="order">
+            <button id="close"><img id="close_img" src="{% static '/main/img/close.svg' %}" alt=""></button>
+            <h3>Оформление заказа</h3>
+            <hr>
+            <h1 id="text_info">Оформить заказ вы можете в личных сообщениях нашей группы ВКонтакте</h1>
+            <button id="vk_btn"><img id="vklogo" src="{% static '/main/img/vk_logo.png' %}" alt="1">BLYNSKY SHOP</button>
+            <br>
+            <button id="tg_btn"><img id="tglogo" src="{% static '/main/img/tglogo.png' %}" alt="1">@BLYNSKYSHOP</button>
+        </div>
+    </div>
+
+    <body id="body">
+
+
+
+
+        {% if sost == 0 %}
+            <h1>Ваша корзина пуста :(</h1>
+        {% endif %}
+
+        {% if sost == 1 %}
+
+            <h2>Ваша корзина</h2>
+
+            <div class="div_basket">
+                {% for el in catalog %}
+                    <div class="div_prod">
+
+                        <div class="info">
+                            <div id="img_div">
+                                <img class="img" src="{{ el.photo.url }}">
+                            </div>
+
+                            <div id="name_and_size_div">
+                                <h4 class="name">{{ el.name }}</h4>
+                                <h6 class="sizes">Доступные размеры: <br> {{ el.sizes }}</h6>
+                            </div>
+                        </div>
+
+                        <div class="div_price"><h4 class="price">{{ el.price }} ₽</h4></div>
+                        <div class="div_buttons">
+                            <button class="btn btn-success del" id="btndel" data-button-id='{{ el.id }}'>Удалить</button>
+                            <button id="order_btn" class="btn btn-success ord">Оформить заказ</button>
+
+                        </div>
+
+
+                    </div>
+                {% endfor %}
+            </div>
+
+
+        {% endif %}
+
+    </body>
+
+
+{% endblock %}

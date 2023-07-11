@@ -1,0 +1,19 @@
+{% extends 'main/example.html' %}
+
+{% block content %}
+    <title>Регистрация</title>
+    <h1>Добро пожаловать!</h1>
+    <h3 class="reg_text">Регистрация</h3>
+        <form class= "regform" method="post">
+        {% csrf_token %}
+        {{ form.login }}<br>
+        {{ form.password }}<br>
+        {{ form.email }}<br>
+        <span>{{ error }}</span>
+        <button class="btn btn-success" type="submit">Зарегестрироваться</button>
+        <br>
+        <a class="havebutt" href="{% url 'main:auth' %}"><ya-tr-span>У меня уже есть акккаунт</ya-tr-span></a>
+    </form>
+{% endblock %}
+
+

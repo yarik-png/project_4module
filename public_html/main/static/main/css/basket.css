@@ -1,0 +1,245 @@
+@media (min-width:1025px) {
+
+
+    body {
+        text-align: center;
+
+    }
+
+    .div_basket {
+        display: block;
+        border-radius: 10px;
+        width: 1200px;
+        margin: auto;
+        margin-top: 30px;
+        background: white;
+        text-align: center;
+        height: fit-content;
+        padding: 40px 20px;
+
+    }
+
+
+    .div_prod {
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: 30px;
+        padding: 20px 20px;
+        border-radius: 10px;
+        text-align: left;
+        display: flex;
+        width: 90%;
+        border: 0.5px groove rgb(210,210,210);
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    }
+
+
+
+
+    .img {
+        width: 150px;
+        height: 150px;
+        border-radius: 20px;
+        padding: 5px 5px;
+        transition: 0.4s;
+        object-fit: contain;
+
+    }
+
+    .img:hover { border: 0.5px groove rgb(210,210,210); } /* при наведении курсора мышки */
+
+
+    .name {
+        margin-left: 40px;
+        margin-top: 20px;
+
+    }
+
+    .sizes {
+       color: rgb(180,180,180);
+       width: 290px;
+       margin-left: 40px;
+       margin-top: 20px;
+    }
+
+    .info {
+        display: flex;
+        width: 40%;
+    }
+
+    .div_price {
+        width: 100px;
+        margin-left: 20%;
+        margin-right: 60px;
+        margin-top: 50px;
+    }
+
+    .price {
+        width: 100px;
+    }
+
+
+    .btn-success {
+        width: 110px;
+        height: 60px;
+        margin-bottom: 10px;
+        margin-top: 20%;
+        color: rgb(100,100,100);
+        background: white;
+        transition: 0.6s;
+    }
+
+    .del {
+        border: 0.5px groove rgb(205,92,92);
+    }
+    .del:hover { background: rgb(205,74,76); }
+    .del:hover { border: 0.5px groove rgb(205,74,76); }
+
+
+    .ord {
+
+    }
+    .ord:hover { background: #0d6efd; }
+    .ord:hover { border: 0.5px groove #0d6efd; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 650px) {
+
+    body {
+        text-align: center;
+
+    }
+
+    .div_basket {
+        display: block;
+        border-radius: 10px;
+        width: 100%;
+        margin-top: 30px;
+        background: white;
+        text-align: center;
+        height: fit-content;
+        padding: 10px 10px;
+
+    }
+
+
+    .div_prod {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding: 10px 10px;
+        border-radius: 10px;
+        text-align: center;
+        display: block;
+        width: 99%;
+        border: 0.5px groove rgb(210,210,210);
+        justify-content: flex;
+
+    }
+
+    #name_and_size_div {
+        width: 70%;
+    }
+
+
+
+    .img {
+        text-align: left;
+        width: 150px;
+        height: 150px;
+        border-radius: 20px;
+        padding: 5px 5px;
+        transition: 0.4s;
+        object-fit: contain;
+        border-radius: 10px;
+
+
+    }
+
+    .img:hover { border: 0.5px groove rgb(210,210,210); } /* при наведении курсора мышки */
+
+
+    .name {
+        margin-left: 10px;
+        margin-top: 10px;
+        font-size: 16px;
+        width: 80%;
+
+    }
+
+    .sizes {
+       color: rgb(180,180,180);
+       width: 80%;
+       margin-left: 10px;
+       margin-top: 20px;
+       font-size: 14px;
+    }
+
+    .info {
+        display: flex;
+        width: 98%;
+    }
+
+    .div_price {
+        width: 98%;
+        text-align: right;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .price {
+        text-align: right;
+        margin-left: 33%;
+        width: 100px;
+
+    }
+
+
+    .div_buttons {
+        display: inline;
+        position: relative;
+
+
+    }
+
+    .btn-success {
+        width: auto;
+        margin-bottom: 10px;
+        color: rgb(100,100,100);
+        background: white;
+        transition: 0.6s;
+    }
+
+    #btndel {
+        border: 0.5px groove rgb(205,92,92);
+        content: "31231";
+    }
+    .del:hover { background: rgb(205,74,76); }
+    .del:hover { border: 0.5px groove rgb(205,74,76); }
+
+
+    .ord {
+
+    }
+    .ord:hover { background: #0d6efd; }
+    .ord:hover { border: 0.5px groove #0d6efd; }
+
+
+
+
+}
+
+
+

@@ -1,0 +1,115 @@
+{% extends 'main/example.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'main/css/product_list.css' %}">
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="{% static '/main/js/catalog.js' %}"></script>
+    <title>Главная</title>
+    <h1>{{title}}</h1>
+    {% if search_query != None %}
+        <h3> Результаты по запросу {{ search_query }} </h3>
+    {% endif %}
+
+
+
+    <div id="main">
+
+         <div id="sort_div">
+            <button id="btn_sort_down" class="sort_indiv_btn">По возрастанию цены</button>
+            <br>
+            <button id="btn_sort_up" class="sort_indiv_btn">По убыванию цены</button>
+            <br>
+            <button id="btn_sort_new" class="sort_indiv_btn">Сначала новые</button>
+            <br>
+            <button id="btn_sort_alt" class="sort_indiv_btn">Сначала старые</button>
+            <br>
+         </div>
+
+
+
+        <div id="left_block">
+
+            <button id="close"><img id="close_img" src="{% static '/main/img/close.svg' %}" alt=""></button>
+            <div id="scroll_elem">
+
+                <div class="sort_filter_div">
+                    <h2 id="sort_category_inf">Категории</h2>
+
+                    <button class="off_filter">все</button>
+                    <br>
+                    <button class="category">кроссовки</button>
+                    <br>
+                    <button class="category">куртки</button>
+                    <br>
+                    <button class="category">футболки</button>
+                    <br>
+                    <button class="category">рубашки</button>
+                    <br>
+                    <button class="category">худи</button>
+                    <br>
+                    <button class="category">кеды</button>
+                    <br>
+                </div>
+
+                <div class="sort_filter_div">
+                    <h2 id="sort_brand_inf">Бренды</h2>
+
+                    <button class="off_filter">все</button>
+                    <br>
+                    {% for elem in brands %}
+                        <button class="brand">{{ elem.brand_name }}</button><br>
+                    {% endfor %}
+                    
+                
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="center_block">
+            <h2>Каталог</h2>
+
+            <div id="search_div">
+                <button id="filter_btn">
+                    <img id="filter_img" src="{% static '/main/img/filter_logo.svg'%}" alt="">
+                </button>
+                <div id="div_sort_btn">
+                    <button id="sort_btn">Сначала старые</button>
+                    <img id="sort_btn_png" src="{% static '/main/img/sort.png'%}" alt="">
+                </div>
+
+                <input id="elastic" type="search" class="catalog_search" placeholder="Я ищу.." name="search">
+            </div>
+
+
+
+
+            <div id="nav" class="list_product">
+                
+           
+                
+                {% for el in prod %}
+                    <div class="prod_cart"
+                         data-product-id="{{ el.id }}"
+                         data-product-name="{{ el.name }}"
+                         data-product-price="{{ el.price }}"
+                         data-product-category="{{ el.category }}"
+                         data-product-brand="{{ el.brand }}"
+                    >
+
+                        <a href="{% url 'main:newprod' el.id %}"><img class="prod_img" src="{{ el.photo.url }}" alt="f"></a>
+                        <h5 class="prod_name">{{ el.name }}</h5>
+                        <h5 class="prod_price">{{ el.price }} ₽</h5>
+                        <h5 class="prod_size">Размеры в наличии: <br> {{ el.sizes }}</h5>
+
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+    </div>
+
+
+{% endblock %}

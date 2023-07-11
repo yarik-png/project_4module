@@ -1,0 +1,80 @@
+{% extends 'main/example.html' %}
+{% load static %}
+{% block content %}
+    <title>Отзывы</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<!--    <script src="{% static '/main/js/scripts.js' %}"></script>-->
+    <link rel="stylesheet" href="{% static 'main/css/comments.css' %}">
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="{% static '/main/js/comments.js' %}"></script>
+
+
+
+
+	<div id="body">
+        <h1>Отзывы</h1>
+        <button id="add_comment"><img id="img_add_comment" src="{% static 'main/img/comments/plus.png' %}" alt=""> Добавить отзыв</button>
+
+        <div id="form_div">
+            <form method="post" id="form_comment">
+                <button id="close" type="button"><img id="close_img" src="{% static '/main/img/close.svg' %}" alt=""></button>
+                <h3>Оставить отзыв</h3>
+                {% csrf_token %}
+                {{ form.username }}<br>
+                {{ form.comment_text }}<br>
+                {{ form.score }}<br>
+
+                <div id="score_div">
+                    <h3>Оценка:</h3><br>
+                    <div id="score_btns_div">
+                        <button type="button" id="score_pos_btn"><img class="img_score" src="{% static 'main/img/comments/pos.png' %}" alt=""></button>
+                        <button type="button" id="score_neg_btn"><img class="img_score" src="{% static 'main/img/comments/neg.png' %}" alt=""></button>
+                    </div>
+                </div>
+
+                {% if is_comm == 1 %}
+                    <button class="post_comment_btn" id="error_btn" type="button">Недоступно</button>
+                    <br>
+                    <span>вы сегодня уже оставляли отзыв на нашем сайте</span>
+                {% else %}
+                    <button class="post_comment_btn" type="submit">Оставить отзыв</button>
+                {% endif %}
+            </form>
+        </div>
+
+        <div class="all_comments">
+
+            {% for elem in comments %}
+            <div class="comment_div">
+                <div class="user_img_div">
+                    <img class="user_img" src="{% static 'main/img/comments/user_logo.svg' %}" alt="">
+                </div>
+                <div class="user_name_and_text">
+                    <div class="name_and_score">
+                        <h5 class="name_user">{{ elem.username }}</h5>
+                        {% if elem.score == 1 %}
+                            <img class="img_score_comment" src="{% static 'main/img/comments/pos.png' %}" alt="">
+                        {% endif %}
+
+                        {% if elem.score == 2 %}
+                            <img class="img_score_comment" src="{% static 'main/img/comments/neg.png' %}" alt="">
+                        {% endif %}
+
+
+                    </div>
+
+                    <h5 class="comment_text">{{ elem.comment_text }}</h5>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+
+
+	</div>
+
+
+
+
+{% endblock %}
