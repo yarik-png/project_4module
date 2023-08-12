@@ -12,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
     <script src="{% static '/main/js/head.js' %}"></script>
+    
 
     <nav class="nav_head">
 
@@ -33,7 +34,12 @@
             
             <hr class="hr_mobile">
             
+            <!--<a class="headtext" href="{% url 'main:news' %}"><img class="headtext_logo" src="{% static '/main/img/new_icon.png'%}" alt=""> новости</a>-->
+            
+            <hr class="hr_mobile">
+            
             <a class="headtext" href="{% url 'main:comments' %}"><img class="headtext_logo" src="{% static '/main/img/comment_logo.svg'%}" alt=""> отзывы</a>
+            
             
             <hr class="hr_mobile">
             

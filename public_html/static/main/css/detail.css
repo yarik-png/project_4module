@@ -1,5 +1,9 @@
 
 @media (min-width:1025px) {
+    #error_tablet {
+        display: none;
+    }
+
 
     .personal_hr {
         margin-top: 50px;
@@ -384,6 +388,10 @@
 
 @media screen and (max-width: 650px) {
 
+    #error_tablet {
+        display: none;
+    }
+
     .detail_img {
         object-fit: contain;
         border: 1px solid grey;
@@ -405,7 +413,7 @@
     }
 
     .detail_deskription {
-        font-size: 26px;
+        font-size: 22px;
         margin-bottom: 40px;
         width: 95%;
         color: rgb(120, 120, 120);

@@ -1,4 +1,9 @@
 @media (min-width:1025px) {
+    
+    #error_tablet {
+        display: none;
+    }
+    
     #all_content {
         display: block;
         width: 70%;

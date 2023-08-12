@@ -1,0 +1,38 @@
+{% extends 'main/example.html' %}
+{% load static %}
+{% block content %}
+    <title>Новости</title>
+    <script src="{% static '/main/js/news.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'main/css/news.css' %}">
+    
+    <body id="body">
+        <h1 id="h1_info">Новости</h1>
+        <h5 id="h5_info">Тут вы можете узнать о новых поступлениях товаров, скидках и конкурсах.</h2>
+        
+        <div id="all_news_div">
+            {% for new in news %}
+            
+                <div class="new_div">
+                    {% if new.photo %}
+                        <img class="news_img" src="{{ new.photo.url }}" alt="f">
+                    {% else %}
+                        <img class="news_img news_belt" src="{% static '/main/img/newss/belt2.png' %}" alt="f">
+                    {% endif %}
+                    
+                    
+               
+                    <span class="new_header">{{ new.header }}</span>
+                    
+                  
+                    
+                    <a class="button_more" href="{% url 'main:newnew' new.id %}">Подробнее</a>
+                    
+                </div>
+                
+            {% endfor %}
+            
+        </div>
+        
+    </body>
+
+{% endblock %}

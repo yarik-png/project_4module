@@ -1,16 +1,5 @@
 from django.db import models
 
-class Article(models.Model):
-    login = models.CharField("логин", max_length=30)
-    password = models.CharField("пароль", max_length=30)
-    email = models.EmailField("Электронная почта", max_length=30, blank=True)
-
-    def __str__(self):
-        return self.login
-
-    class Meta:
-        verbose_name = "Пользователя"
-        verbose_name_plural = "Пользователи"
 
 class Catalog(models.Model):
     name = models.CharField("имя товара", max_length=50)
@@ -38,21 +27,6 @@ class Catalog(models.Model):
         
         
         
-class Brands(models.Model):
-    brand_name = models.CharField('имя бренда', max_length=40)
-    
-    def __str__(self):
-        return self.brand_name
-        
-    class Meta:
-        verbose_name = "Бренд"
-        verbose_name_plural = "Бренды"
-        
-
-
-
-
-
 class Comments(models.Model):
     username = models.CharField('имя пользователя', max_length=40)
     comment_text = models.TextField('текст отзыва', max_length=150)
@@ -70,4 +44,16 @@ class Comments(models.Model):
         
     
 
+class News(models.Model):
+    header = models.CharField('Заголовок', max_length=70)
+    news_text = models.TextField('текст новости')
+    photo = models.ImageField("картинка для новости", upload_to="media/prod_images", blank=True)
     
+
+    def __str__(self):
+        return self.header
+    
+    
+    class Meta:
+        verbose_name = "Новость"
+        verbose_name_plural = "Новости"

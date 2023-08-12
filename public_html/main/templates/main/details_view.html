@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{% static 'main/css/detail.css' %}">
 	<link rel="stylesheet" href="{% static 'main/css/order.css' %}">
 
-
+    
 	<body id="body">
 
 		<div id="detdiv" class="detail_div">
@@ -18,7 +18,7 @@
 					<h3>Оформление заказа</h3>
 					<hr>
 					<h1 id="text_info">Оформить заказ вы можете в личных сообщениях нашей группы ВКонтакте</h1>
-					<button id="vk_btn"><img id="vklogo" src="{% static '/main/img/vk_logo.svg' %}" alt="1">BLYNSKY SHOP</button>
+					<button id="vk_btn"><img id="vklogo" src="{% static '/main/img/vk_logo.png' %}" alt="1">BLYNSKY SHOP</button>
 					<br>
 					<button id="tg_btn"><img id="tglogo" src="{% static '/main/img/tglogo.png' %}" alt="1">@BLYNSKYSHOP</button>
 
@@ -30,7 +30,7 @@
 			{% if product.miniphoto1 == "" %}
 
 				<div class="all">
-				<input checked type="radio" name="respond" id="desktop">
+				    <input checked type="radio" name="respond" id="desktop">
 					<article id="slider">
 							<input checked type="radio" name="slider" id="switch1">
 							<input type="radio" name="slider" id="switch2">
@@ -50,9 +50,9 @@
 				</div>
 				<hr class="personal_hr">
 			{% elif product.miniphoto2 == "" %}
-
+             
 				<div class="all">
-				<input checked type="radio" name="respond" id="desktop">
+				    <input checked type="radio" name="respond" id="desktop">
 					<article id="slider">
 							<input checked type="radio" name="slider" id="switch1">
 							<input type="radio" name="slider" id="switch2">
@@ -82,11 +82,10 @@
 				</div>
 				<hr>
 
-			{% elif product.miniphoto2 %}
-
-
+			{% elif product.miniphoto3 == "" %}
+			   
 				<div class="all">
-				<input checked type="radio" name="respond" id="desktop">
+				    <input checked type="radio" name="respond" id="desktop">
 					<article id="slider">
 							<input checked type="radio" name="slider" id="switch1">
 							<input type="radio" name="slider" id="switch2">
@@ -118,6 +117,92 @@
 					</article>
 				</div>
 				<hr>
+				
+			{% elif product.miniphoto4 == "" %}
+           
+			<div class="all">
+			    <input checked type="radio" name="respond" id="desktop">
+				<article id="slider">
+						<input checked type="radio" name="slider" id="switch1">
+						<input type="radio" name="slider" id="switch2">
+						<input type="radio" name="slider" id="switch3">
+						<input type="radio" name="slider" id="switch4">
+						<input type="radio" name="slider" id="switch5">
+					<div id="slides">
+						<div id="overflow">
+							<div class="image">
+								<article><img class="prod_img" src="{{ product.photo }}"></article>
+								<article><img class="prod_img" src="{{ product.miniphoto1 }}"></article>
+								<article><img class="prod_img" src="{{ product.miniphoto2 }}"></article>
+								<article><img class="prod_img" src="{{ product.miniphoto3 }}"></article>
+
+							</div>
+						</div>
+					</div>
+					<div id="controls">
+						<label for="switch1"></label>
+						<label for="switch2"></label>
+						<label for="switch3"></label>
+						<label for="switch4"></label>
+
+					</div>
+					<div id="active">
+						<label for="switch1"></label>
+						<label for="switch2"></label>
+						<label for="switch3"></label>
+						<label for="switch4"></label>
+
+					</div>
+				</article>
+			</div>
+			<hr>	
+			
+			
+			{% elif product.miniphoto4 %}
+            
+			<div class="all">
+			    <input checked type="radio" name="respond" id="desktop">
+				<article id="slider">
+						<input checked type="radio" name="slider" id="switch1">
+						<input type="radio" name="slider" id="switch2">
+						<input type="radio" name="slider" id="switch3">
+						<input type="radio" name="slider" id="switch4">
+						<input type="radio" name="slider" id="switch5">
+					<div id="slides">
+						<div id="overflow">
+							<div class="image">
+								<article><img class="prod_img" src="{{ product.photo }}"></article>
+								<article><img class="prod_img" src="{{ product.miniphoto1 }}"></article>
+								<article><img class="prod_img" src="{{ product.miniphoto2 }}"></article>
+								<article><img class="prod_img" src="{{ product.miniphoto3 }}"></article>
+								<article><img class="prod_img" src="{{ product.miniphoto4 }}"></article>
+
+							</div>
+						</div>
+					</div>
+					<div id="controls">
+						<label for="switch1"></label>
+						<label for="switch2"></label>
+						<label for="switch3"></label>
+						<label for="switch4"></label>
+						<label for="switch5"></label>
+
+					</div>
+					<div id="active">
+						<label for="switch1"></label>
+						<label for="switch2"></label>
+						<label for="switch3"></label>
+						<label for="switch4"></label>
+						<label for="switch5"></label>
+
+					</div>
+				</article>
+			</div>
+			<hr>	
+				
+			
+				
+				
 			{% endif %}
 
 

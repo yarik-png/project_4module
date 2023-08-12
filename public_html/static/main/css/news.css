@@ -1,0 +1,241 @@
+@media screen and (max-width: 650px) {
+    #h1_info {
+        margin-bottom: 20px;
+        font-size: 55px;
+        font-weight: 700;
+        
+    }
+    
+    #h5_info {
+        width: 80%;
+        margin: auto;
+        color: rgb(100, 100, 100);
+        font-size: 30px;
+        margin-bottom: 30px;
+        
+    }
+    
+    #all_news_div {
+        width: 97%;
+        /*border: 1px solid black;*/
+        margin-left: 1.5%;
+        /*padding: 2%;*/
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    
+    .new_div {
+        height: auto;
+        width: 47%;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-evenly;
+        margin: 5px;
+    }
+    
+    .new_header {
+        text-align: left;
+        font-weight: 600;
+        font-size: 20px;
+        margin-left: 5%;
+    }
+    
+    .news_img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0px 0px;
+        margin-bottom: 10px;
+        /*object-fit: contain;*/
+    }
+    
+    /*.news_belt {*/
+    /*    height: 340px;*/
+    /*}*/
+    
+    .button_more {
+        margin-top: 30px;
+        text-decoration: none;
+        border: 1px groove #0d6efd;
+        border-radius: 10px;
+        transition: 0.4s;
+        padding: 10px 10px;
+        max-width: 90%;
+        margin: 5%;
+
+    }
+    
+    .button_more:hover { background-color: #0d6efd; } /* при наведении курсора мышки */
+    .button_more:hover { color: rgb(255,255,255); } /* при наведении курсора мышки */
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 651px) and (max-width: 1024px) {
+    #h1_info {
+        margin-bottom: 20px;
+        font-size: 55px;
+        font-weight: 700;
+        
+    }
+    
+    #h5_info {
+        width: 80%;
+        margin: auto;
+        color: rgb(100, 100, 100);
+        font-size: 30px;
+        margin-bottom: 30px;
+        
+    }
+    
+    #all_news_div {
+        width: 97%;
+        /*border: 1px solid black;*/
+        margin-left: 1.5%;
+        /*padding: 2%;*/
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    
+    .new_div {
+        height: auto;
+        width: 32%;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-evenly;
+        margin: 5px;
+    }
+    
+    .new_header {
+        text-align: left;
+        font-weight: 600;
+        font-size: 20px;
+        margin-left: 5%;
+    }
+    
+    .news_img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0px 0px;
+        margin-bottom: 10px;
+        /*object-fit: contain;*/
+    }
+    
+    /*.news_belt {*/
+    /*    height: 340px;*/
+    /*}*/
+    
+    .button_more {
+        margin-top: 30px;
+        text-decoration: none;
+        border: 1px groove #0d6efd;
+        border-radius: 10px;
+        transition: 0.4s;
+        padding: 10px 10px;
+        max-width: 90%;
+        margin: 5%;
+
+    }
+    
+    .button_more:hover { background-color: #0d6efd; } /* при наведении курсора мышки */
+    .button_more:hover { color: rgb(255,255,255); } /* при наведении курсора мышки */
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1025px) {
+    #h1_info {
+        margin-bottom: 20px;
+        font-size: 55px;
+        font-weight: 700;
+        
+    }
+    
+    #h5_info {
+        width: 50%;
+        margin: auto;
+        color: rgb(100, 100, 100);
+        font-size: 30px;
+        
+    }
+    
+    #all_news_div {
+        width: 80%;
+        /*border: 1px solid black;*/
+        margin-left: 10%;
+        padding: 2%;
+        display: flex;
+    }
+    
+    
+    .new_div {
+        height: auto;
+        width: 30%;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+        
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-evenly;
+        margin: 20px;
+    }
+    
+    .new_header {
+        text-align: left;
+        font-weight: 600;
+        font-size: 20px;
+        margin-left: 5%;
+    }
+    
+    .news_img {
+        width: 100%;
+        margin-bottom: 20px;
+        object-fit: cover;
+    }
+    
+    .news_belt {
+        height: 340px;
+    }
+    
+    .button_more {
+        margin-top: 30px;
+        text-decoration: none;
+        border: 1px groove #0d6efd;
+        border-radius: 10px;
+        transition: 0.4s;
+        padding: 10px 10px;
+        max-width: 90%;
+        margin: 5%;
+
+    }
+    
+    .button_more:hover { background-color: #0d6efd; } /* при наведении курсора мышки */
+    .button_more:hover { color: rgb(255,255,255); } /* при наведении курсора мышки */
+    
+}

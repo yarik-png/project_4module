@@ -4,13 +4,11 @@ $(document).ready(function(el){
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    console.log("12312123123");
-
+    
      $('#close_head_text').on('click', function(el) {
         el.preventDefault();
-        console.log("12312123123");
-         document.getElementById("head_text_div").animate({left: "-300%"}, 500);
-         sleep(480).then(() => { document.getElementById("head_text_div").style.left="-300%"; });
+         document.getElementById("head_text_div").animate({left: "-300%"}, 1500);
+         sleep(1500).then(() => { document.getElementById("head_text_div").style.left="-300%"; });
 
 
 
@@ -20,9 +18,8 @@ $(document).ready(function(el){
 
     $('#menu_btn').on('click', function(eld) {
         eld.preventDefault();
-        console.log("меню");
-        document.getElementById("head_text_div").animate({left: "0%"}, 500);
-        sleep(480).then(() => { document.getElementById("head_text_div").style.left="0%"; });
+        document.getElementById("head_text_div").animate({left: "0%"}, 1500);
+        sleep(1500).then(() => { document.getElementById("head_text_div").style.left="0%"; });
 
     });
 

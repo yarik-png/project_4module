@@ -1,0 +1,27 @@
+{% extends 'main/example.html' %}
+{% load static %}
+{% block content %}
+    <title>{{ new.header }}</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="{% static '/main/js/scripts.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'main/css/new_detail.css' %}">
+
+    
+	<body id="body">
+        <h1 class='header'>{{ new.header }}</h1>
+        
+        <div class="new_text_div">
+            {% if new.photo %}
+                <img class="news_img" src="{{ new.photo.url }}" alt="f">
+            {% endif %}
+            <span class="new_text">{{ new.news_text }}</span>
+        </div>
+        
+        
+		
+	</body>
+
+
+
+
+{% endblock %}

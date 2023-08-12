@@ -10,6 +10,8 @@ $(document).ready(function(em){
     var inputElement = document.getElementById('elastic');
 
 
+   
+
     isvis = 0;
     
     
@@ -53,15 +55,38 @@ $(document).ready(function(em){
         for (let el = 0; el < products.length; el++) {
             products[el].style.height = max_height + 'px';
         }
+        
+        
+        var images = document.getElementsByClassName("prod_img");
+        
+        var max_height = 0
+        for (let i = 0; i < images.length; i++) {
+            var cont = images[i].offsetHeight
+            if (cont > max_height) {
+                var max_height = cont
+            }
+            
+        }
+        
+    
+        for (let el = 0; el < products.length; el++) {
+            images[el].style.height = max_height + 'px';
+        }
+        
+        
+        
+        
+    
+    
     });
     
   
 
-
-
-
-
     
+    
+
+
+
 
 
 
@@ -100,7 +125,7 @@ $(document).ready(function(em){
             document.getElementById("sort_div").animate({ opacity: 1 }, 100 );
             sleep(100).then(() => { document.getElementById("sort_div").style.opacity="1"; });
             document.getElementById("sort_div").style.visibility="visible";
-            document.getElementById("sort_div").style.left="30%";
+            document.getElementById("sort_div").style.left="5%";
 
             if (windowInnerWidth < 1000) {
                 console.log("test");
@@ -111,13 +136,12 @@ $(document).ready(function(em){
 
 
         } else if (isvis == 1) {
-            console.log("Убираем");
-
+            
 
             var degrees = -180;
             var angle = $("#sort_btn_png").data("angle");
             if (!angle)
-                angle = 0;
+                angle = 180;
             angle = +angle + degrees;
 
             $("#sort_btn_png")
@@ -280,6 +304,39 @@ $(document).ready(function(em){
                 elem.classList.remove('hide');
             });
         }
+        
+        var divElement = document.getElementById('nav'); 
+
+        var allElements = divElement.querySelectorAll('.prod_cart');
+        console.log(allElements)
+        var hideElements = divElement.querySelectorAll('.hide');
+        console.log(hideElements.length + "количество невидимых");
+        console.log(allElements.length + "количество всех");
+        
+        innerdivs = divElement.querySelectorAll('.innerdiv');
+        
+        if (hideElements.length == allElements.length && innerdivs.length < 1)  {
+            console.log("нет видимых эдементов")
+            var spanElement = document.createElement('span');
+            var divElementinner = document.createElement('div');
+            spanElement.innerText = 'К сожалению, по вашему запросу не нашлось товаров, но мы готовы выслушать ваши предложения и постараться найти то, что вам нужно. Мы всегда открыты для обратной связи и готовы сделать все возможное, чтобы удовлетворить потребности наших клиентов.';
+            divElementinner.id = 'not_search';
+            divElementinner.classList.add('innerdiv');
+            
+            divElement.appendChild(divElementinner);
+            divElementinner.appendChild(spanElement);
+            
+           
+                        
+            
+      
+            
+        } else if (hideElements.length < allElements.length) {
+            var divElementinner = document.getElementById('not_search');
+            console.log("есть видимые")
+            divElement.removeChild(divElementinner);
+   
+        }
 
 
 
@@ -322,6 +379,39 @@ $(document).ready(function(em){
                 elem.classList.remove('hide');
             });
         }
+        
+        var divElement = document.getElementById('nav'); 
+
+        var allElements = divElement.querySelectorAll('.prod_cart');
+        console.log(allElements)
+        var hideElements = divElement.querySelectorAll('.hide');
+        console.log(hideElements.length + "количество невидимых");
+        console.log(allElements.length + "количество всех");
+        
+        innerdivs = divElement.querySelectorAll('.innerdiv');
+        
+        if (hideElements.length == allElements.length && innerdivs.length < 1)  {
+            console.log("нет видимых эдементов")
+            var spanElement = document.createElement('span');
+            var divElementinner = document.createElement('div');
+            spanElement.innerText = 'К сожалению, по вашему запросу не нашлось товаров, но мы готовы выслушать ваши предложения и постараться найти то, что вам нужно. Мы всегда открыты для обратной связи и готовы сделать все возможное, чтобы удовлетворить потребности наших клиентов.';
+            divElementinner.id = 'not_search';
+            divElementinner.classList.add('innerdiv');
+            
+            divElement.appendChild(divElementinner);
+            divElementinner.appendChild(spanElement);
+            
+           
+                        
+            
+      
+            
+        } else if (hideElements.length < allElements.length) {
+            var divElementinner = document.getElementById('not_search');
+            console.log("есть видимые")
+            divElement.removeChild(divElementinner);
+   
+        }
 
 
 
@@ -342,6 +432,39 @@ $(document).ready(function(em){
         elasticItems.forEach(function (elem){
             elem.classList.remove('hide');
         });
+        
+        var divElement = document.getElementById('nav'); 
+
+        var allElements = divElement.querySelectorAll('.prod_cart');
+        console.log(allElements)
+        var hideElements = divElement.querySelectorAll('.hide');
+        console.log(hideElements.length + "количество невидимых");
+        console.log(allElements.length + "количество всех");
+        
+        innerdivs = divElement.querySelectorAll('.innerdiv');
+        
+        if (hideElements.length == allElements.length && innerdivs.length < 1)  {
+            console.log("нет видимых эдементов")
+            var spanElement = document.createElement('span');
+            var divElementinner = document.createElement('div');
+            spanElement.innerText = 'К сожалению, по вашему запросу не нашлось товаров, но мы готовы выслушать ваши предложения и постараться найти то, что вам нужно. Мы всегда открыты для обратной связи и готовы сделать все возможное, чтобы удовлетворить потребности наших клиентов.';
+            divElementinner.id = 'not_search';
+            divElementinner.classList.add('innerdiv');
+            
+            divElement.appendChild(divElementinner);
+            divElementinner.appendChild(spanElement);
+            
+           
+                        
+            
+      
+            
+        } else if (hideElements.length < allElements.length) {
+            var divElementinner = document.getElementById('not_search');
+            console.log("есть видимые")
+            divElement.removeChild(divElementinner);
+   
+        }
     });
 
     $('.off_filter').on('click', function(el) {
@@ -358,6 +481,39 @@ $(document).ready(function(em){
         elasticItems.forEach(function (elem){
             elem.classList.remove('hide');
         });
+        
+        var divElement = document.getElementById('nav'); 
+
+        var allElements = divElement.querySelectorAll('.prod_cart');
+        console.log(allElements)
+        var hideElements = divElement.querySelectorAll('.hide');
+        console.log(hideElements.length + "количество невидимых");
+        console.log(allElements.length + "количество всех");
+        
+        innerdivs = divElement.querySelectorAll('.innerdiv');
+        
+        if (hideElements.length == allElements.length && innerdivs.length < 1)  {
+            console.log("нет видимых эдементов")
+            var spanElement = document.createElement('span');
+            var divElementinner = document.createElement('div');
+            spanElement.innerText = 'К сожалению, по вашему запросу не нашлось товаров, но мы готовы выслушать ваши предложения и постараться найти то, что вам нужно. Мы всегда открыты для обратной связи и готовы сделать все возможное, чтобы удовлетворить потребности наших клиентов.';
+            divElementinner.id = 'not_search';
+            divElementinner.classList.add('innerdiv');
+            
+            divElement.appendChild(divElementinner);
+            divElementinner.appendChild(spanElement);
+            
+           
+                        
+            
+      
+            
+        } else if (hideElements.length < allElements.length) {
+            var divElementinner = document.getElementById('not_search');
+            console.log("есть видимые")
+            divElement.removeChild(divElementinner);
+   
+        }
     });
 
 

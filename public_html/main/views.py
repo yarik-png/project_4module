@@ -2,10 +2,13 @@ import time
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import CommentForm
-from .models import Article, Catalog, Comments, Brands
+from .models import Catalog, Comments, News
 from django import forms
 from django.views.generic import DetailView
 import urllib.parse
+from PIL import Image
+import os
+
 
 cart = 1
 is_auth = 0
@@ -14,17 +17,7 @@ corrdate = []
 
 
 
-def add_to_cart(request, prod_id):
-    prod = Catalog.objects.all()
-    prod1 = prod[prod_id-1]
-    print(prod1)
-    data = {
-        "is_auth": is_auth,
-        "id_prod": prod_id,
-        "prod": prod1,
-    }
-    print(prod_id)
-    return render(request, 'main/cart_add.html', data)
+
 
 
 class NewDetailView(DetailView):
@@ -32,15 +25,33 @@ class NewDetailView(DetailView):
     template_name = 'main/details_view.html'
     context_object_name = 'product'
 
+class NewNewView(DetailView):
+    model = News
+    template_name = 'main/new_view.html'
+    context_object_name = 'new'
 
 
 def index(request):
-
-
+    
+    brands = []
+    categories = []
 
     prod = Catalog.objects.all()
-    brands = Brands.objects.all()
+    # brands = Brands.objects.all()
     sq = request.GET.get('search')
+    
+    
+    for item in prod:
+        if item.brand not in brands:
+            brands.append(item.brand)
+    
+    
+    
+    for item in prod:
+        if item.category not in categories:
+            categories.append(item.category)
+    
+    
     if sq:
         pass
     else:
@@ -52,6 +63,7 @@ def index(request):
         "search_query": sq,
         "is_auth" : is_auth,
         "brands": brands,
+        "categories": categories,
     }
     return render(request, "main/mainpage.html", data)
 
@@ -62,73 +74,9 @@ def about(request):
     }
     return render(request, "main/about.html", data)
 
-def registration(request):
-    global is_auth
-    is_auth = 0
-    error = ""
-    if request.method == "POST":
-        form = ArticleForm(request.POST)
-        if form.is_valid():
-            form.save()
-            error = ""
-            return redirect("auth")
-        else:
-            error = ""
 
 
-    form = ArticleForm()
 
-    data = {
-        'error': error,
-        'form': form,
-        "is_auth": is_auth
-    }
-
-    return render(request, "main/registration.html", data)
-
-
-def auth(request):
-    global corrdate
-    global is_auth
-    global login
-    error = ""
-    form = ArticleForm()
-    users = Article.objects.all()
-    getlogin = request.POST.get('log')
-    getpassword = request.POST.get('pass')
-    getemail = 'def'
-
-    login = getlogin
-
-    if getlogin:
-        print("выполнено213123")
-        for item in users:
-            if item.login == getlogin or getlogin == item.email:
-                if str(item.password) == str(getpassword):
-                    print("SUCCERFULLY LOGIN")
-                    is_auth = 1
-                    error = ""
-                    corrdate = [item.login, item.email, item.password]
-                    return redirect("/cabinet")
-
-
-            else:
-                print("dont succerfully login")
-                error = "Неверный логин или пароль"
-
-
-    data = {
-        'error': error,
-        'form': form,
-        "is_auth": is_auth,
-        "users": users.all,
-        'getpassword': getpassword,
-        'getlogin': getlogin,
-
-
-    }
-
-    return render(request, "main/authorization.html", data)
 
 def basket(request):
 
@@ -226,3 +174,12 @@ def comments(request):
             "is_comm:": 2
         }
         return render(request, "main/comments.html", data)
+        
+        
+
+def news(request):
+    news = News.objects.all()
+    data = {
+            'news': news,
+        }
+    return render(request, "main/news.html", data)

@@ -1,27 +1,7 @@
-from .models import Article, Comments
+from .models import Comments
 from django.forms import ModelForm, TextInput, EmailInput, Textarea, IntegerField, NumberInput
 
-class ArticleForm(ModelForm):
-    class Meta:
-        model = Article
-        fields = ['login', 'password', 'email']
 
-        widgets = {
-            'login': TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': "Логин"
-            }),
-
-            'password': TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': "Пароль"
-            }),
-
-            'email': EmailInput(attrs={
-                'class': 'form-control',
-                'placeholder': "Email"
-            })
-        }
 
 
 class CommentForm(ModelForm):

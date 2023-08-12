@@ -10,23 +10,18 @@
         <h3> Результаты по запросу {{ search_query }} </h3>
     {% endif %}
 
+    <link rel=”icon” href="{% static '/main/icons/blsh.ico' %}" type=”image/x-icon”>
+
+    <head>
+        <link rel="shortcut icon" href="{% static '/main/icons/blsh.ico' %}" type="image/x-icon">
+    </head>
+    
+    
 
 
     <div id="main">
 
-         <div id="sort_div">
-            <button id="btn_sort_down" class="sort_indiv_btn">По возрастанию цены</button>
-            <br>
-            <button id="btn_sort_up" class="sort_indiv_btn">По убыванию цены</button>
-            <br>
-            <button id="btn_sort_new" class="sort_indiv_btn">Сначала новые</button>
-            <br>
-            <button id="btn_sort_alt" class="sort_indiv_btn">Сначала старые</button>
-            <br>
-         </div>
-
-
-
+    
         <div id="left_block">
 
             <button id="close"><img id="close_img" src="{% static '/main/img/close.svg' %}" alt=""></button>
@@ -34,21 +29,12 @@
 
                 <div class="sort_filter_div">
                     <h2 id="sort_category_inf">Категории</h2>
-
+                    
                     <button class="off_filter">все</button>
                     <br>
-                    <button class="category">кроссовки</button>
-                    <br>
-                    <button class="category">куртки</button>
-                    <br>
-                    <button class="category">футболки</button>
-                    <br>
-                    <button class="category">рубашки</button>
-                    <br>
-                    <button class="category">худи</button>
-                    <br>
-                    <button class="category">кеды</button>
-                    <br>
+                    {% for elem in categories %}
+                        <button class="category">{{ elem }}</button><br>
+                    {% endfor %}
                 </div>
 
                 <div class="sort_filter_div">
@@ -57,7 +43,7 @@
                     <button class="off_filter">все</button>
                     <br>
                     {% for elem in brands %}
-                        <button class="brand">{{ elem.brand_name }}</button><br>
+                        <button class="brand">{{ elem }}</button><br>
                     {% endfor %}
                     
                 
@@ -77,6 +63,19 @@
                 <div id="div_sort_btn">
                     <button id="sort_btn">Сначала старые</button>
                     <img id="sort_btn_png" src="{% static '/main/img/sort.png'%}" alt="">
+                    
+                    
+                    <div id="sort_div">
+                        <button id="btn_sort_down" class="sort_indiv_btn">По возрастанию цены</button>
+                        <br>
+                        <button id="btn_sort_up" class="sort_indiv_btn">По убыванию цены</button>
+                        <br>
+                        <button id="btn_sort_new" class="sort_indiv_btn">Сначала новые</button>
+                        <br>
+                        <button id="btn_sort_alt" class="sort_indiv_btn">Сначала старые</button>
+                        <br>
+                     </div>
+                     
                 </div>
 
                 <input id="elastic" type="search" class="catalog_search" placeholder="Я ищу.." name="search">

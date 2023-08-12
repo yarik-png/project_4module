@@ -1,17 +1,6 @@
 $(document).ready(function(){
 
-    var images = document.getElementsByClassName("img");
-
-    // Проходимся по каждому изображению и обрезаем атрибут src на 8 символов
-    for (var i = 0; i < images.length; i++) {
-        var src = images[i].getAttribute('src');
-
-        // Укорачиваем атрибут src на 8 символов
-        var shortenedSrc = src.substring(6);
-
-        // Устанавливаем обрезанный атрибут src обратно в элемент <img>
-        images[i].setAttribute('src', shortenedSrc);
-    }
+    
 
 
     var form = $('#form1');
